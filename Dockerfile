@@ -1,8 +1,11 @@
 FROM php:latest
 
 ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get update -y && apt-get install -y unzip
+RUN apt-get update -y && apt-get install -y unzip nodejs npm
 RUN docker-php-ext-install pdo_mysql
+RUN npm install -g npm
+RUN npm install -g n
+RUN n latest
 
 RUN mkdir /var/php -p
 WORKDIR /var/php

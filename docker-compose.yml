@@ -5,7 +5,7 @@ services:
     build:
       context: ./
       dockerfile: ./Dockerfile
-    command: sh -c "cd /var/www/html/trial; php artisan serve --host=0.0.0.0"
+    command: sh -c "cd /var/www/html/trial; composer install; npm install; php artisan serve --host=0.0.0.0"
     volumes:
       - ./src:/var/www/html
     ports:
