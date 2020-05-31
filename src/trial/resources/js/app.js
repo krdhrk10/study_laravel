@@ -24,6 +24,10 @@ Vue.component('clients', require('./components/passport/Clients.vue').default);
 Vue.component('auth-clients', require('./components/passport/AuthorizedClients.vue').default);
 Vue.component('personal-tokens', require('./components/passport/PersonalAccessTokens.vue').default);
 
+// passport oauth sample
+Vue.component('passport-auth-sample', require('./components/passport/OAuthSample.vue').default);
+Vue.component('passport-auth-sample-callback', require('./components/passport/OAuthSampleCallback.vue').default);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

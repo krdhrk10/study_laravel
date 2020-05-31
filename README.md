@@ -38,7 +38,12 @@ $ composer require laravel/passport
   - User.php
   - auth.php
 
-- secretの生成
+- 必要なテーブルのmigration
+```
+$ php artisan migrate
+```
+
+- clientの生成(personal client, password client)
 ```
 $ php artisan passport:install
 ```

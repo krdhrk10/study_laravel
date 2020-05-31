@@ -21,6 +21,13 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
+// Laravel Passport Sample OAuth
+Route::group([
+    'namespace' => 'PassportSample',
+    'prefix' => 'passport'
+], static function() {
+    Route::get('', 'PassportSampleController@index')->name('index');
 
-Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('begin', 'PassportSampleController@begin')->name('begin');
+    Route::get('callback', 'PassportSampleController@callback')->name('callback');
+});
